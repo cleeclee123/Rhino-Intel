@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+.main {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.page-title {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
