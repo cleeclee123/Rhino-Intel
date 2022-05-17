@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import * as ReactBootStrap from "react-bootstrap";
 import { Navbar, NavDropdown, Form, FormControl, Button, Nav } from "react-bootstrap";
 import {
     BrowserRouter as Router,
@@ -8,6 +9,7 @@ import {
 } from "react-router-dom";
 
 import Home from "../pages/Home";
+import About from "../pages/About";
 import SignIn from "../pages/SignIn";
 import SignUp from "../pages/SignUp";
 import Dashboard from "../pages/Dashboard";
@@ -18,28 +20,31 @@ export default class NavbarComp extends Component {
         return (
             <Router>
                 <div className>
-                    <Navbar bg="dark" variant={"dark"} expand="lg">
-                        <div className="main-name"><Navbar.Brand href="#"> Rhino Intel </Navbar.Brand></div>
-                        <Navbar.Toggle aria-controls="navbarScroll" />
-                        <Navbar.Collapse id="navbarScroll">
-                            <Nav
-                                className="mr-auto my-2 my-lg-0"
-                                style={{ maxHeight: '100px' }}
-                                navbarScroll
-                            >
-                                <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                                <Nav.Link as={Link} to="/signin">Sign In</Nav.Link>
-                                <Nav.Link as={Link} to="/signup">Sign Up</Nav.Link>
-                                <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
-                            </Nav>
+                    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                            <Navbar.Brand href="/home"> &nbsp; Rhino Intel </Navbar.Brand>
+                            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                            <Navbar.Collapse id="responsive-navbar-nav">
+                                <Nav className="me-auto"> </Nav>
 
-                        </Navbar.Collapse>
+                                <Nav>
+                                    <Nav.Link href="/home">Home</Nav.Link>
+                                    <Nav.Link href="/about"> About </Nav.Link>
+                                    <Nav.Link href="/signup"> Sign Up </Nav.Link>
+                                    <Nav.Link href="/signin"> Sign In </Nav.Link>
+                                    <Nav.Link href="/Dashboard"> Dashboard  &nbsp; </Nav.Link>
+                                    
+                                </Nav>
+
+                            </Navbar.Collapse>
                     </Navbar>
                 </div>
                 <div>
                     <Switch>
                         <Route path="/home">
                             <Home />
+                        </Route>
+                        <Route path="/about">
+                            <About />
                         </Route>
                         <Route path="/signin">
                             <SignIn />
