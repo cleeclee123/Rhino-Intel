@@ -10,28 +10,28 @@ export default class SignUp extends Component {
                  <h1 className="page-title"> Sign Up Page </h1>
                 
                  <Form.Group className="mb-3" controlId="formBasicName">
-                    <Form.Label>First Name </Form.Label>
+                    <Form.Label className="labels">First Name </Form.Label>
                     <Form.Control type="name" placeholder="Enter your first name" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicName">
-                    <Form.Label>Last Name </Form.Label>
+                    <Form.Label className="labels">Last Name </Form.Label>
                     <Form.Control type="email" placeholder="Enter your last name" />
                 </Form.Group>
 
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
+                    <Form.Label className="labels">Email address</Form.Label>
                     <Form.Control type="email" placeholder="Enter your email" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
+                    <Form.Label className="labels">Password</Form.Label>
                     <Form.Control type="password" placeholder="Create your password" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Agree to Terms & Conditions" />
+                    <Form.Check className="labels" type="checkbox" label="Agree to Terms & Conditions" />
                 </Form.Group>
 
                 <Button variant="primary" type="submit">
