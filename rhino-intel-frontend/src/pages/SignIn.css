@@ -1,20 +1,18 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .main {
-    padding-left: 5%;
-    padding-right: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .page-title {
-    padding-top: 1%;
-    padding-bottom: 1%;
-    color: white
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: white;
 }
 
 .labels {
-    color: white;
+  color: white;
 }
-
-
