@@ -9,7 +9,8 @@ import SignIn from "../pages/SignIn";
 import SignUp from "../pages/SignUp";
 import Dashboard from "../pages/Dashboard";
 
-import Coins from "../pages/crypto/coinspage";
+import Coins from "../pages/crypto/CoinsPage";
+import SingleCoin from "../pages/crypto/SingleCoinPage";
 
 export default class NavbarComp extends Component {
   render() {
@@ -57,7 +58,7 @@ export default class NavbarComp extends Component {
                 </NavDropdown>
                 &nbsp;
                 <NavDropdown title="Crypto" id="collasible-nav-dropdown">
-                  <NavDropdown.Item href="/cryptocurrencies">
+                  <NavDropdown.Item href="/coins">
                     Coins
                   </NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">
@@ -101,10 +102,13 @@ export default class NavbarComp extends Component {
               <SignUp />
             </Route>
 
-            <Route exact path="/cryptocurrencies">
+            <Route exact path="/coins">
               <Coins/>
             </Route>
 
+            <Route path="/coins/:id">
+              <SingleCoin/>
+            </Route>
 
             <Route path="/dashboard">
               <Dashboard />

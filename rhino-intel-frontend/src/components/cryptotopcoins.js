@@ -123,7 +123,7 @@ export default function CoinsTable() {
                     return (
                       <TableRow
                         onClick={() =>
-                          history.push(`/cryptocurrencies/${row.id}`)
+                          history.push(`/coins/${row.id}`)
                         }
                         className={classes.row}
                         key={row.name}

@@ -1,6 +1,6 @@
 import React from "react";
 import TopCoins from "../../components/cryptotopcoins";
-import "./coinspage.css";
+import "./CoinsPage.css";
 
 function CoinPage() {
   return (
