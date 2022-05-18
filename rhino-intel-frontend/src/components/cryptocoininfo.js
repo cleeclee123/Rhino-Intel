@@ -2,7 +2,7 @@ import React from "react";
 
 const CoinInfo = () => {
     return <div>
-        coin info
+        <h1 style={{ color: "white", position: "relative"}} > coin info </h1>
     </div>
 };
 
