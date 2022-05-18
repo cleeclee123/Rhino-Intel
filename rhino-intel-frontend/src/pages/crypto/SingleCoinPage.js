@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 //import ReactHtmlParser from "react-html-parser";
 import CoinInfo from "../../components/cryptocoininfo";
 import { SingleCoin } from "../../config/cryptoapi";
-import { numberWithCommas } from "../../components/cryptotopcoins";
 
 const CoinPage = () => {
   const { id } = useParams();
