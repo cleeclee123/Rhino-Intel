@@ -222,6 +222,50 @@ const CoinPage = () => {
             </Table>
           </TableContainer>
         </div>
+
+        <div style={{ paddingLeft: "1rem", paddingTop: "1.5rem" }}>
+          <TableContainer component={Paper}>
+            <Table
+              sx={{ minWidth: 400 }}
+              size="small"
+              aria-label="a dense table"
+            >
+              <TableHead>
+                <TableRow>
+                  <TableCell align="right">Rank </TableCell>
+                  <TableCell align="right">Market Cap </TableCell>
+                  <TableCell align="right">Market Cap 24H Change</TableCell>
+                  <TableCell align="right">Total Volume</TableCell>
+                  <TableCell align="right">Diluted Valuation</TableCell>
+                  <TableCell align="right">Current Supply</TableCell>
+                  <TableCell align="right">Total Supply</TableCell>
+                  <TableCell align="right"> Liquidity</TableCell>
+                  <TableCell align="right"> PI Score</TableCell>
+
+
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                <TableRow>
+                  <TableCell align="right">{coin?.market_cap_rank}</TableCell>
+                  <TableCell align="right">
+                    ${coin?.market_data.market_cap.usd}
+                  </TableCell>
+                  <TableCell align="right" style={{ color: profit > 0 ? "green" : "red" }}>
+                    ${Math.round(coin?.market_data.market_cap_change_24h_in_currency.usd * 100) / 100} ({Math.round(coin?.market_data.market_cap_change_percentage_24h_in_currency.usd * 100) / 100}%)
+                  </TableCell>
+                  <TableCell align="right">${coin?.market_data.total_volume.usd}</TableCell>
+                  <TableCell align="right">${coin?.market_data.fully_diluted_valuation.usd}</TableCell>
+                  <TableCell align="right">{coin?.market_data.circulating_supply}</TableCell>
+                  <TableCell align="right">{coin?.market_data.total_supply}</TableCell>
+                  <TableCell align="right">{coin?.liquidity_score}</TableCell>
+                  <TableCell align="right">{coin?.public_interest_score}</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </div>
+
         <div style={{ padding: "1rem" }}>
           <CoinInfo coin={coin} />
         </div>
